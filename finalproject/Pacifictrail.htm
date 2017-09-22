@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+    .scrolloff {
+        pointer-events: none;
+    }
+</style>
+<script src="./Pacifictrail_files/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#map').addClass('scrolloff');                // set the mouse events to none when doc is ready
+        
+        $('#overlay').on("mouseup",function(){          // lock it when mouse up
+            $('#map').addClass('scrolloff'); 
+            //somehow the mouseup event doesn't get call...
+        });
+        $('#overlay').on("mousedown",function(){        // when mouse down, set the mouse events free
+            $('#map').removeClass('scrolloff');
+        });
+
+        $("#map").mouseleave(function () {              // becuase the mouse up doesn't work... 
+            $('#map').addClass('scrolloff');            // set the pointer events to none when mouse leaves the map area
+                                                        // or you can do it on some other event
+        });
+        
+    });
+</script>
+
+
+
+<title>Pacifictrail</title>
+<link href="./Pacifictrail_files/font-awesome.css" rel="stylesheet">
+<link href="./Pacifictrail_files/index.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+	<div class="wrapper" id="wrapper">
+
+
+    	<a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#wrapper"><img src="./Pacifictrail_files/logo1.png" alt="PacificTrail - Logo Image" class="main-logo"></a>
+		
+    	<header>
+    	
+<nav>
+              
+          <ul>
+                
+                	
+       	    <li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#yurts">home</a></li>
+                	<li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#menu">Yurts</a></li>
+                	<li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#trails">Trails</a></li>
+                	<li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#reservations">Reservations</a></li>
+                
+                  <li><a href="https://www.facebook.com/" target="_blank"><img src="./Pacifictrail_files/fbicon.png" alt="Facebook - Link" class="fb-logo"></a></li>
+                  <li><a href="https://twitter.com/" target="_blank"><img src="./Pacifictrail_files/tw.png" alt="Twitter - Link" class="twitter-logo"></a></li>
+                </ul>
+</nav>
+			
+        
+        </header>
+        
+      
+
+
+
+        <main>
+        	<!-- Begin Location/Seasons Section -->
+            <div class="yurts" id="yurts">
+            
+            	<h2>Seasons</h2>
+                   <ul class="flex-container">
+  <li class="flex-item1">Winter</li>
+  <li class="flex-item2">Spring</li>
+  <li class="flex-item3">Summer</li>
+  <li class="flex-item4">Autumn</li>
+
+</ul>
+                <h2>Location</h2>
+                
+            
+            <div id="overlay" class="map">
+            <iframe src="./Pacifictrail_files/embed.html" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            </div>
+            </div>
+            <!-- End Seasons/Location Section -->
+
+            <!-- Begin Images Section -->
+            <div class="menu" id="menu">
+            	<img src="./Pacifictrail_files/trailbanner.png" alt="" class="banner">
+                <div class="menu-grid">
+
+                    <figure>
+                        <img src="./Pacifictrail_files/yurt1.jpg" style="width:520px;height:400px;" alt="PacificTrail&#39;s abc" border="10">
+                        <figcaption>
+                          Large Cozy Yurts
+                        </figcaption>
+                    </figure>
+
+					          <figure>
+                        <img src="./Pacifictrail_files/yurt2.jpg" style="width:520px;height:400px;" alt="PacificTrail&#39;s abc" border="10">
+                        <figcaption>
+                          Spacious Yurts with great ocean view
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="./Pacifictrail_files/trail2.jpg" style="width:520px;height:430px;" alt="PacificTrail&#39;s abc" border="10">
+                        <figcaption>
+                          Biking Trails
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="./Pacifictrail_files/trail4.jpg" style="width:520px;height:430px;" alt="PacificTrail&#39;s abc" border="10">
+                        <figcaption>
+                          Beautiful Scenery
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="./Pacifictrail_files/trail5.jpg" style="width:520px;height:430px;" alt="PacificTrail&#39;s abc" border="10">
+                        <figcaption>
+                       Ocean Side Sand Railing
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="./Pacifictrail_files/trail6.jpg" style="width:520px;height:430px;" alt="PacificTrail&#39;s abc" border="10">
+                        <figcaption>
+                         Great Adventure
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="./Pacifictrail_files/trail7.jpg" style="width:520px;height:430px;" alt="PacificTrail&#39;s abc" border="10">
+                        <figcaption>
+                          Lake Side Hiking Trails
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="./Pacifictrail_files/trail1.jpeg" style="width:520px;height:430px;" alt="PacificTrail&#39;s abc" border="10">
+                        <figcaption>
+                          Winding Hiking Trails
+                        </figcaption>
+                    </figure>
+
+                    
+
+                </div>
+            </div>
+            <!-- End Images Section -->
+
+            <!-- Begin Trails Section -->
+            	
+            <div class="trails" id="trails">
+            	<img src="./Pacifictrail_files/thetrails.png" alt="" class="banner">
+                <div class="menu-grid">
+            <div class="trails" id="trails">
+          
+                <h3>Breakneck Ridge Trail</h3>
+                <img src="./Pacifictrail_files/trail1st.jpg" alt="photo" class="trail-photo">
+                
+                
+
+
+<table style="width:35.15%">
+  
+  <tbody><tr>
+    <td>Activity Type:</td>
+    <th>Hiking</th>
+    
+  </tr>
+  <tr>
+    <td>Nearby City:</td>
+    <th>Beacon</th>
+    
+  </tr>
+  <tr>
+    <td>Length:</td>
+    <th>9.6 total miles</th>
+    
+  </tr>
+  <tr>
+    <td>Elevation Gain:</td>
+    <th>1,500 feet</th>
+    
+  </tr><tr>
+    <td>Trail Type:</td>
+    <th>Loop</th>
+    
+  </tr><tr>
+    <td>Skill Level:</td>
+    <th>Strenuous</th>
+    
+  </tr><tr>
+    <td>Season:</td>
+    <th>Spring through Fall</th>
+    
+  </tr>
+</tbody></table>
+
+
+
+
+
+
+				
+                <h3>Glacier Gorge</h3>
+                <img src="./Pacifictrail_files/trail2nd.jpg" alt="photo" class="trail-photo">
+                
+   <table style="width:35.15%">
+  
+  <tbody><tr>
+    <td>Activity Type:</td>
+    <th>Hiking</th>
+    
+  </tr>
+  <tr>
+    <td>Nearby City:</td>
+    <th>Longs Peak</th>
+    
+  </tr>
+  <tr>
+    <td>Length:</td>
+    <th>9.6 total miles</th>
+    
+  </tr>
+  <tr>
+    <td>Elevation Gain:</td>
+    <th>Minimal</th>
+    
+  </tr><tr>
+    <td>Trail Type:</td>
+    <th>Out and Back</th>
+    
+  </tr><tr>
+    <td>Skill Level:</td>
+    <th>Moderator to strenuous</th>
+    
+  </tr><tr>
+    <td>Season:</td>
+    <th>October to June</th>
+    
+  </tr>
+</tbody></table>
+            <div class="video">
+                <video controls="">
+                <source src="promo-vid.mp4" type="video/mp4">
+		           
+                </video>
+            </div>
+            
+        </div></div></div></main>
+<!-- End Trails Section -->
+
+       <!-- Begin Reservation Section -->
+        
+       
+        	<div class="reservations" id="reservations">
+        	<h4> Reservation </h4>   
+  
+    <form method="post" action="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html" class="ccform">
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Full Name" required="">
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Email" required="">
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Phone">
+    </div>
+     <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Subject" required="">
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
+        <textarea class="ccformfield" name="comments" rows="8" placeholder="Message" required=""></textarea>
+    </div>
+    <div class="ccfield-prepend">
+        <input class="ccbtn" type="submit" value="Submit">
+    </div>
+    </form>
+</div>
+			</div>
+        
+       
+        <!-- End Reservation Section -->
+
+<!-- BEGIN FOOTER SECTION -->
+<footer>
+       <center>
+        <div class="logo-footer">
+			<a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#wrapper"><img src="./Pacifictrail_files/logo1.png" alt="Logo" class="logo-2" id="reservation"></a>
+		   </div>
+            <div class="email">
+            	<input type="email" name="email" id="email" placeholder="How can I help?" maxlength="60"><button type="submit" class="submit">Search</button>
+            </div>
+            
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#yurts">Home</a></li>
+                	<li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#menu">Yurts</a></li>
+                	<li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#trails">Trails</a></li>
+                	<li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/index.html#reservations">Reservations</a></li>
+                	<li><a href="http://omega.uta.edu/~dtd6224/3350/FINALPRO/sitemap.html">SiteMap</a></li>
+                </ul>
+            </div>
+        	
+        
+        <p class="abc">© 2016 Daddy Issues. All Rights Reserved.</p>
+			</center>
+        </footer>
+
+<!-- END FOOTER SECTION -->
+
+
+
+
+</body></html>
